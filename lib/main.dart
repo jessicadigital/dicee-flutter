@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,6 +9,8 @@ void main() {
         appBar: AppBar(
           title: Text('Dicee'),
           backgroundColor: Colors.red,
+          foregroundColor: Colors.white,
+
         ),
         body: DicePage(),
       ),
@@ -18,6 +21,15 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Row(
+      children: <Widget>[
+        Expanded(
+          child:Image.asset('images/dice1.png'),
+        ),
+        Expanded(
+          child:Image.asset('images/dice2.png'),
+        ),
+      ],
+    );
   }
 }
